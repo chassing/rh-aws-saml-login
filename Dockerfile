@@ -5,6 +5,8 @@ ARG TWINE_USERNAME
 ARG TWINE_PASSWORD
 ARG MAKE_TARGET
 
+WORKDIR /app
+
 # Install dependencies
 COPY pyproject.toml uv.lock ./
 RUN uv sync --frozen --no-install-project
